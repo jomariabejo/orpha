@@ -23,7 +23,7 @@ import bcrypt from 'bcrypt'
 // })()
 // --- END BOOTSTRAP ---
 
-export const authOptions = {
+const authOptions = {
   providers: [
     CredentialsProvider({
       name: "Credentials",
