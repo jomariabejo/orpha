@@ -1,18 +1,19 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getDb } from '../../mongodb'
 
-export async function GET(_req: NextRequest, { params }: { params: { childId: string } }) {
+export async function GET(_req: NextRequest, { params }: { params: Promise<{ childId: string }> }) {
+  const { childId } = await params
   const db = await getDb()
-  const child = await db.collection('children').findOne({ id: params.childId })
+  const child = await db.collection('children').findOne({ id: childId })
   if (!child) {
     return NextResponse.json({ error: 'Not found' }, { status: 404 })
   }
   return NextResponse.json(child)
 }
 
-export async function PATCH(req: NextRequest, { params }: { params: { childId: string } }) {
+export async function PATCH(req: NextRequest, { params }: { params: Promise<{ childId: string }> }) {
+  const { childId } = await params
   const db = await getDb()
-  const childId = params.childId
   const data = await req.json()
   const update: any = {}
 
@@ -37,4 +38,4 @@ export async function PATCH(req: NextRequest, { params }: { params: { childId: s
     return NextResponse.json({ error: 'Not found' }, { status: 404 })
   }
   return NextResponse.json(result.value)
-} 
+}
