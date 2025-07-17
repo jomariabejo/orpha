@@ -175,9 +175,15 @@ export default function MealPlanViewPage({ params }: { params: Promise<{ id: str
             </button>
             <Link
               href={`/admin/meal-plans/${mealPlan.id}/edit`}
-              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+              className="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-lg font-medium transition-colors mb-1"
             >
               Edit Plan
+            </Link>
+            <Link
+              href={`/admin/meal-plans/${mealPlan.id}/clone`}
+              className="bg-purple-600 hover:bg-purple-700 text-white px-4 py-2 rounded-lg font-medium transition-colors"
+            >
+              Clone Plan
             </Link>
             <Link
               href="/admin/meal-plans"
