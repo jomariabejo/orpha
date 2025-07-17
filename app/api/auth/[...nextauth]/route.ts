@@ -4,7 +4,7 @@ import { getDb } from "../../mongodb";
 import { User } from "../../../../models/user";
 import bcrypt from "bcrypt";
 
-// --- BOOTSTRAP ADMIN USER (Uncomment to run once) ---
+// --- BOOTSTRAP ADMIN USER ---
 (async () => {
   const db = await getDb();
   const userCount = await db.collection("users").countDocuments();

@@ -17,13 +17,30 @@ export const authOptions = {
         password: { label: "Password", type: "password" },
       },
       async authorize(credentials: any) {
-        if (!credentials?.email || !credentials?.password) return null
+        console.log('Auth attempt for:', credentials?.email)
+        if (!credentials?.email || !credentials?.password) {
+          console.log('Missing credentials')
+          return null
+        }
         const db = await getDb()
         const user = await db.collection("users").findOne({ email: credentials.email }) as User | null
-        if (!user) return null
+        console.log('User found:', user ? 'Yes' : 'No')
+        if (!user) {
+          console.log('User not found in database')
+          return null
+        }
         const valid = await bcrypt.compare(credentials.password, user.passwordHash)
-        if (!valid) return null
-        if (!(user.role !== 'staff' && user.role !== 'admin')) return null
+        console.log('Password valid:', valid)
+        if (!valid) {
+          console.log('Invalid password')
+          return null
+        }
+        console.log('User role:', user.role)
+        if (!('role' in user) || (user.role !== 'staff' && user.role !== 'admin')) {
+          console.log('Invalid role:', user.role)
+          return null
+        }
+        console.log('Authentication successful for:', user.email)
         return {
           id: user.id,
           name: user.name,
