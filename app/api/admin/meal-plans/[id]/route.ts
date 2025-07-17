@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
 import { getDb } from '../../../mongodb'
-import { MealPlan, MealPlanFormData } from '../../../../../models/mealPlan'
-import { authOptions } from '../../../auth/[...nextauth]/route'
+import { DailyMealPlanRecord, DailyMealPlanFormData } from '../../../../../models/mealPlan'
+import { authOptions } from '../../../auth/config'
 
 // Helper function to verify admin role
 async function verifyAdminRole() {
@@ -40,10 +40,10 @@ export async function PUT(req: NextRequest, { params }: { params: Promise<{ id: 
     await verifyAdminRole()
     const { id } = await params
     const db = await getDb()
-    const data: MealPlanFormData = await req.json()
+    const data: DailyMealPlanFormData = await req.json()
 
     // Validation
-    if (!data.date || !data.breakfast || !data.lunch || !data.dinner) {
+    if (!data.date) {
       return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
     }
 

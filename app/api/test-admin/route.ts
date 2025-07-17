@@ -1,10 +1,10 @@
-import { NextResponse } from 'next/server
+import { NextResponse } from 'next/server'
 import { getDb } from '../mongodb'
 
 export async function GET() {
   try {
     const db = await getDb()
-    const adminUser = await db.collection(users).findOne({ email: admin@example.com' })    
+    const adminUser = await db.collection('users').findOne({ email: 'admin@example.com' })    
     if (adminUser) {
       return NextResponse.json({
         exists: true, 
@@ -16,6 +16,6 @@ export async function GET() {
       return NextResponse.json({ exists: false })
     }
   } catch (error) {
-    return NextResponse.json({ error: 'Database error }, { status: 500 })
+    return NextResponse.json({ error: 'Database error' }, { status: 500 })
   }
 } 

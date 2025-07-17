@@ -1,0 +1,138 @@
+[object Object]info:[object Object]name":Orpha Meal Plans - Week 29 2025",
+  description": Sample meal plans for testing week29 of 2025 (July 14-2025,schema: https://schema.getpostman.com/json/collection/v2.10/collection.json"
+  },
+item: [
+   [object Object]  name: Monday - July 145,
+ request":[object Object]
+        method:POST,
+  header": [
+          [object Object]         key": "Content-Type",
+    value":application/json"
+          }
+        ],
+body":[object Object]
+       mode: raw",
+       raw:{undefinedn  \date\: \"2257\",\n  \"breakfast\": {\n    \"title\": \"Oatmeal with Berries\",\n    \description\": \"Healthy oatmeal topped with fresh berries and honey\",\n    \ingredients\": [\n      {\name\": \"Oats\", \"quantity\": \"1 cup\},\n      {\name\": \"Milk\", \"quantity\": \"1 cup\},\n      {\"name\:\"Mixed berries\", \quantity\: "1 cup\},\n      {\"name\": \"Honey\", \"quantity\": \1 tbsp\}n    ],n    \instructions\: [undefinedn      \"Cook oats with milk until creamy\",\n      \"Top with fresh berries\",\n      \"Drizzle with honey\"\n    ],\n    \servingSize\: \1bowl\n  },\n  \"lunch\": {\n    \"title\": \"Grilled Chicken Salad\",\n    \description\": \"Fresh mixed greens with grilled chicken breast\",\n    \ingredients\": [\n      {\name": \Chicken breast\", \"quantity\: "1iece\},\n      {\"name\": \"Mixed greens\", \"quantity\": \2cups\},\n     [object Object]\"name\": \"Cherry tomatoes\", \quantity\: "1 cup\},\n      {\"name\": \"Cucumber\", \quantity\: "1 cup\},\n      {\"name\": \"Olive oil\", \"quantity\": \1 tbsp\}n    ],n    \instructions\": [\n      \"Grill chicken breast until cooked through\",\n      \"Chop vegetables\",\n      \"Mix with olive oil dressing\"\n    ],\n    \servingSize\": \1late\"\n  },\n  \"dinner\": {\n    \title\": \"Salmon with Vegetables\",\n    \description\": \Baked salmon with steamed vegetables\",\n    \ingredients\": [\n    [object Object]\"name\:\"Salmon fillet\", \"quantity\: "1iece\},\n      {\"name\": \"Broccoli\", \"quantity\": \"1 cup\},\n      {\name\: "Carrots\", \quantity\: "1 cup\},\n      {\"name\": \"Lemon\", \"quantity\": \"1 slice\}n    ],n    \instructions\": [\n      \"Season salmon with salt and pepper\",\n      \Bake at 400 for 15 minutes\",\n      \"Steam vegetables until tender\"\n    ],\n    \servingSize\": \1late\"\n  },\n  \"morningSnack\": {\n    \"title\": \Apple with Almonds\",\n    \description\": \"Fresh apple slices with a handful of almonds\",\n    \ingredients\": [\n      {\"name\": \"Apple\", \"quantity\: \"1 medium\},\n   [object Object]\name\: "Almonds\", \quantity\": \"1/4up\}n    ],n    \instructions\: [\n      \"Wash and slice apple\",\n      \"Serve with almonds\"\n    ],\n    \servingSize\: \"1 serving\n },\n  \afternoonSnack\": {\n    \"title\": \Greek Yogurt with Honey\",\n    \description\": \"Creamy Greek yogurt drizzled with honey\",\n    \ingredients\": [\n      {\"name\": \"Greek yogurt\", \"quantity\": \"1 cup\},\n      {\"name\": \"Honey\", \"quantity\:\1sp\}n    ],n    \instructions\": [\n      \Spoon yogurt into bowl\",\n      \"Drizzle with honey\"\n    ],\n    \servingSize\: \1 cupundefinedn }\n}"
+        },
+        url": [object Object]         raw": "{{baseUrl}}/api/admin/meal-plans,
+        host": ["{{baseUrl}}"],
+         path": ["api",admin", "meal-plans]        }
+      }
+    },
+   [object Object]  name: Tuesday - July 155,
+ request":[object Object]
+        method:POST,
+  header": [
+          [object Object]         key": "Content-Type",
+    value":application/json"
+          }
+        ],
+body":[object Object]
+       mode: raw",
+       raw:{undefinedn  \date\: \"2257\",\n  \"breakfast\": {\n    \"title\": \"Scrambled Eggs with Toast\",\n    \description\": \"Fluffy scrambled eggs served with whole grain toast\",\n    \ingredients\": [\n      {\name\": \"Eggs\", \"quantity\: "2arge\},\n      {\"name\": \Whole grain bread\", \"quantity\: \"2 slices\},\n    [object Object]\"name\": \"Butter\", \"quantity\": \1tbsp\},\n      {\"name\": \"Salt and pepper\", \"quantity\:\"to taste\}n    ],n    \instructions\": [\n      \"Crack eggs into bowl and whisk\",\n      \"Cook in butter until fluffy\",\n      \"Toast bread and serve\"\n    ],\n    \servingSize\": \1late\n  },\n  \"lunch\": {\n    \title": \"Turkey Sandwich\",\n    \description\": \"Lean turkey sandwich with lettuce and tomato\",\n    \ingredients\": [\n [object Object]\"name\:\"Turkey breast\", \"quantity\": \"3 oz\},\n      {\"name\": \Whole grain bread\", \"quantity\: \"2 slices\},\n      {\name\: "Lettuce\", \"quantity\: \"2 leaves\},\n    [object Object]\"name\": \"Tomato\", \"quantity\: \"2 slices\},\n      {\name\: "Mustard\", \"quantity\:\1sp\}n    ],n    \instructions\": [\n      \"Layer turkey on bread\",\n      \"Add lettuce and tomato\,n  \"Spread mustard and close sandwich\"\n    ],\n    \servingSize\: \1 sandwich\"\n  },\n  \"dinner\": {\n    \"title\": \Pasta with Tomato Sauce\",\n    \description\": \Whole wheat pasta with homemade tomato sauce\",\n    \ingredients\": [\n      {\"name\": \Whole wheat pasta\", \"quantity\": \1 cooked\},\n    [object Object]\"name\": \"Tomato sauce\", \quantity\: "1 cup\},\n [object Object]\"name\": \Groundbeef\", \"quantity\": \"2 oz\},\n      {\"name\": \"Onion\", \quantity\": \1/4 cup chopped\},\n    [object Object]\"name\": \"Garlic\", \"quantity\": \"1 clove\}n    ],n    \instructions\: [n      \"Cook pasta according to package\",\n      \"Brown beef with onion and garlic\",\n      \"Add tomato sauce and simmer\"\n    ],\n    \servingSize\: \1bowl\"\n  },\n  \"morningSnack\": {\n    \title\": \Banana",undefinedn    \description\": \Fresh ripe banana\",\n    \ingredients\": [\n    [object Object]\"name\": \"Banana\", \"quantity\:\"1 medium\}n    ],n    \instructions\: [\n      \"Peel and eat\"\n    ],\n    \servingSize\: \1 banana\n },\n  \afternoonSnack\": {\n    \title\:\Carrot Sticks\",\n    \description\": \"Fresh carrot sticks\",\n    \ingredients\": [\n      {\name\: "Carrots\", \"quantity\:\"1 medium\}n    ],n    \instructions\: [\n      \Wash and cut into sticks\"\n    ],\n    \servingSize\: \1 cupundefinedn }\n}"
+        },
+        url": [object Object]         raw": "{{baseUrl}}/api/admin/meal-plans,
+        host": ["{{baseUrl}}"],
+         path": ["api",admin", "meal-plans]        }
+      }
+    },
+   [object Object]name": Wednesday - July 165,
+ request":[object Object]
+        method:POST,
+  header": [
+          [object Object]         key": "Content-Type",
+    value":application/json"
+          }
+        ],
+body":[object Object]
+       mode: raw",
+       raw:{undefinedn  \date\: \"2257\",\n  \"breakfast\": {\n    \title\:\Smoothie Bowl\",\n    \description\": \"Berry smoothie bowl topped with granola\",\n    \ingredients\": [\n      {\"name\:\"Mixed berries\", \"quantity\": \"1 cup\},\n    [object Object]\"name\": \"Banana\", \quantity\": \1},\n      {\"name\": \"Greek yogurt\", \quantity\: "1 cup\},\n      {\name\: "Granola\", \quantity\": \"1/4up\}n    ],n    \instructions\": [\n      \"Blend berries, banana, and yogurt\",\n      \Pour into bowl\",\n      \"Top with granola\"\n    ],\n    \servingSize\: \1bowl\n  },\n  \"lunch\": {\n    \title\": \"Quinoa Bowl\",\n    \description\": \"Quinoa bowl with roasted vegetables\",\n    \ingredients\": [\n   [object Object]\"name\": \"Quinoa\", \quantity\": \"1/2 cooked\},\n      {\"name\": \"Sweet potato\", \quantity\: \"1/2 cup cubed\},\n      {\name\": \"Chickpeas\", \quantity\: "1 cup\},\n      {\name\": \"Kale\", \"quantity\:\1up\}n    ],n    \instructions\: [n     \"Cook quinoa according to package\",\n      \"Roast sweet potato and chickpeas\",\n      \Mix with kale and quinoa\"\n    ],\n    \servingSize\: \1bowl\"\n  },\n  \"dinner\": {\n    \"title\: "Baked Chicken with Rice\",\n    \description\": \"Herb-baked chicken breast with brown rice\",\n    \ingredients\": [\n      {\name": \Chicken breast\", \"quantity\: "1iece\},\n      {\"name\:\"Brown rice\", \quantity\": \"1/2 cooked\},\n      {\"name\": \"Herbs\", \"quantity\": \1tbsp\},\n      {\"name\": \"Olive oil\", \"quantity\": \1 tbsp\}n    ],n    \instructions\": [\n      \"Season chicken with herbs\",\n      \Bake at 375 for 25 minutes\",\n      \"Cook rice according to package\"\n    ],\n    \servingSize\": \1late\"\n  },\n  \"morningSnack\": {\n    \title\": \Orange",undefinedn    \description\": \"Fresh orange segments\",\n    \ingredients\": [\n [object Object]\"name\": \"Orange\", \"quantity\:\"1 medium\}n    ],n    \instructions\: [\n      \Peel and separate segments\"\n    ],\n    \servingSize\: \1 orange\n },\n  \afternoonSnack\": {\n    \title\": \Hummus with Crackers\",\n    \description\": \"Hummus dip with whole grain crackers\",\n    \ingredients\": [\n    [object Object]\"name\": \"Hummus\", \"quantity\": \2tbsp\},\n      {\"name\": \"Whole grain crackers\", \"quantity\:\"6 pieces\}n    ],n    \instructions\": [\n      \Spoon hummus into small bowl\",\n      \"Serve with crackers\"\n    ],\n    \servingSize\: \1erving\n }\n}"
+        },
+        url": [object Object]         raw": "{{baseUrl}}/api/admin/meal-plans,
+        host": ["{{baseUrl}}"],
+         path": ["api",admin", "meal-plans]        }
+      }
+    },
+   [object Object]name":Thursday - July 175,
+ request":[object Object]
+        method:POST,
+  header": [
+          [object Object]         key": "Content-Type",
+    value":application/json"
+          }
+        ],
+body":[object Object]
+       mode: raw",
+       raw:{undefinedn  \date\: \"2257\",\n  \"breakfast\": {\n    \"title\: "Pancakes with Maple Syrup\",\n    \description\": \"Fluffy pancakes served with pure maple syrup\",\n    \ingredients\": [\n      {\"name\": \"Flour\", \"quantity\": \"1 cup\},\n      {\name\": \"Eggs\", \"quantity\: "1arge\},\n      {\name\": \"Milk\", \quantity\: "3 cup\},\n      {\"name\": \Maple syrup\", \"quantity\": \2 tbsp\}n    ],n    \instructions\": [\n      \"Mix flour, eggs, and milk\",\n      \"Cook on griddle until golden\",\n      \"Serve with maple syrup\"\n    ],\n    \servingSize\: \3 pancakes\n  },\n  \"lunch\": {\n    \"title\": \"Tuna Salad Wrap\",\n    \description\": \"Tuna salad wrapped in whole wheat tortilla\",\n    \ingredients\": [\n      {\name\": \"Tuna\", \"quantity\": \"3 oz\},\n    [object Object]\"name\": \"Celery\", \quantity\": \1/4 cup chopped\},\n      {\"name\:\"Mayonnaise\", \"quantity\": \1tbsp\},\n      {\"name\": \"Whole wheat tortilla\", \"quantity\": \"1 piece\}n    ],n    \instructions\": [\n      \"Mix tuna with celery and mayo\,undefinedn      \"Spread on tortilla\",\n      \Roll and serve\"\n    ],\n    \servingSize\: \1wrap\"\n  },\n  \"dinner\": {\n    \"title\:\Beef Stir Fry\",\n    \description\": \"Lean beef stir fry with mixed vegetables\",\n    \ingredients\": [\n      {\"name\": \"Lean beef\", \"quantity\": \"3 oz\},\n      {\"name\": \"Broccoli\", \"quantity\": \"1 cup\},\n      {\"name\": \"Bell peppers\", \quantity\: "1 cup\},\n      {\"name\": \"Soy sauce\", \"quantity\": \1 tbsp\}n    ],n    \instructions\: [\n      \"Stir fry beef until browned\",\n      \"Add vegetables and stir fry\,n     \"Season with soy sauce\"\n    ],\n    \servingSize\": \1late\"\n  },\n  \"morningSnack\": {\n    \title\": \Grapes",undefinedn    \description\": \"Fresh red grapes\",\n    \ingredients\": [\n      {\"name\:\"Red grapes\", \"quantity\:\1up\}n    ],n    \instructions\: [\n      \Wash and serve\"\n    ],\n    \servingSize\": \"1 cup\n },\n  \afternoonSnack\": {\n    \title\": \"Cheese and Crackers\",\n    \description\: "Sliced cheese with whole grain crackers\",\n    \ingredients\": [\n    [object Object]\"name\": \"Cheese\", \"quantity\": \"1 oz\},\n      {\"name\": \"Whole grain crackers\", \"quantity\:\"4 pieces\}n    ],n    \instructions\": [\n      \Slice cheese\",\n      \"Serve with crackers\"\n    ],\n    \servingSize\: \1erving\n }\n}"
+        },
+        url": [object Object]         raw": "{{baseUrl}}/api/admin/meal-plans,
+        host": ["{{baseUrl}}"],
+         path": ["api",admin", "meal-plans]        }
+      }
+    },
+   [object Object]  name: Friday - July 185,
+ request":[object Object]
+        method:POST,
+  header": [
+          [object Object]         key": "Content-Type",
+    value":application/json"
+          }
+        ],
+body":[object Object]
+       mode: raw",
+       raw:{undefinedn  \date\: \"2257\",\n  \"breakfast\": {\n    \title\": \Yogurt Parfait\",\n    \description\": \"Layered yogurt with granola and berries\",\n    \ingredients\": [\n      {\"name\": \"Greek yogurt\", \"quantity\": \"1 cup\},\n      {\name\: "Granola\", \quantity\: "1 cup\},\n      {\"name\:\"Mixed berries\", \quantity\": \"1/4up\}n    ],n    \instructions\": [\n      \"Layer yogurt in glass\",\n      \Add granola layer\",\n      \"Top with berries\"\n    ],\n    \servingSize\: \"1 parfait\n  },\n  \"lunch\": {\n    \"title\": \Vegetable Soup\",\n    \description\": \"Hearty vegetable soup with whole grain bread\",\n    \ingredients\": [\n      {\"name\:\"Vegetables\", \"quantity\": \2s mixed\},\n      {\"name\": \"Vegetable broth\", \"quantity\": \2cups\},\n      {\"name\": \Whole grain bread\", \"quantity\": \"1 slice\}n    ],n    \instructions\": [\n      \Simmer vegetables in broth\,undefinedn      \"Season to taste\",\n      \"Serve with bread\"\n    ],\n    \servingSize\: \1bowl\"\n  },\n  \"dinner\": {\n    \"title\": \Grilled Fish with Vegetables\",\n    \description\: "Grilled white fish with steamed vegetables\",\n    \ingredients\": [\n      {\"name\": \White fish fillet\", \"quantity\: "1iece\},\n      {\name\": \"Asparagus\", \"quantity\": \"1 cup\},\n      {\"name\": \"Zucchini\", \quantity\: "1 cup\},\n      {\"name\": \"Lemon\", \"quantity\": \"1 slice\}n    ],n    \instructions\": [\n      \"Season fish with herbs\",\n      \Grill until flaky\",\n      \"Steam vegetables\"\n    ],\n    \servingSize\": \1late\"\n  },\n  \"morningSnack\": {\n    \"title\": \"Pear\",\n    \description\": \"Fresh ripe pear\",\n    \ingredients\": [\n      {\name\": \"Pear\", \"quantity\:\"1 medium\}n    ],n    \instructions\: [\n      \Wash and slice\"\n    ],\n    \servingSize\: \1pear\n },\n  \afternoonSnack\": {\n    \"title\": \Trail Mix\",\n    \description\": \"Mixed nuts and dried fruits\",\n    \ingredients\": [\n      {\"name\:\"Mixed nuts\", \quantity\: "1 cup\},\n      {\"name\": \Dried cranberries\", \"quantity\": \2 tbsp\}n    ],n    \instructions\": [\n      \"Mix nuts and dried fruits\"\n    ],\n    \servingSize\": \"1/3 cup\n }\n}"
+        },
+        url": [object Object]         raw": "{{baseUrl}}/api/admin/meal-plans,
+        host": ["{{baseUrl}}"],
+         path": ["api",admin", "meal-plans]        }
+      }
+    },
+   [object Object]name":Saturday - July 195,
+ request":[object Object]
+        method:POST,
+  header": [
+          [object Object]         key": "Content-Type",
+    value":application/json"
+          }
+        ],
+body":[object Object]
+       mode: raw",
+       raw:{undefinedn  \date\: \"2257\",\n  \"breakfast\": {\n    \title\": \French Toast\",\n    \description\": \"Classic French toast with cinnamon and maple syrup\",\n    \ingredients\": [\n      {\"name\": \"Bread\", \"quantity\: \"2 slices\},\n      {\name\": \"Eggs\", \"quantity\: "1arge\},\n      {\name\": \"Milk\", \quantity\: "1 cup\},\n      {\"name\:\"Cinnamon\", \quantity\: "1 tsp\},\n      {\"name\": \Maple syrup\", \"quantity\": \2 tbsp\}n    ],n    \instructions\": [\n      \"Whisk egg, milk, and cinnamon\",\n      \"Dip bread and cook until golden\",\n      \"Serve with maple syrup\"\n    ],\n    \servingSize\: \2 slices\n  },\n  \"lunch\": {\n    \"title\": \"Pizza Slice\",\n    \description\": \Whole grain pizza slice with vegetables\",\n    \ingredients\": [\n      {\"name\": \Pizza dough\", \"quantity\: "1lice\},\n    [object Object]\"name\": \"Tomato sauce\", \"quantity\": \2tbsp\},\n      {\"name\": \Mozzarella cheese\", \"quantity\": \"1 oz\},\n      {\"name\": \"Bell peppers\", \quantity\": \"1/4up\}n    ],n    \instructions\": [\n      \"Top dough with sauce\",\n      \"Add cheese and vegetables\",\n      \Bakeuntil cheese melts\"\n    ],\n    \servingSize\": \1lice\"\n  },\n  \"dinner\": {\n    \"title\": \"Baked Potatoes with Toppings\",\n    \description\": \"Baked potatoes with healthy toppings\",\n    \ingredients\": [\n      {\"name\": \"Potatoes\", \"quantity\: \"1 medium\},\n      {\"name\": \"Greek yogurt\", \"quantity\": \2tbsp\},\n   [object Object]\"name\": \"Chives\", \"quantity\": \1tbsp\},\n      {\"name\": \"Broccoli\", \quantity\": \"1/2up\}n    ],n    \instructions\: [n     \Bake potato until tender\",\n      \"Top with yogurt and chives\",\n      \"Serve with steamed broccoli\"\n    ],\n    \servingSize\: \1 potato\"\n  },\n  \"morningSnack\": {\n    \"title\": \"Strawberries\",\n    \description\": \"Fresh strawberries\",\n    \ingredients\": [\n      {\"name\": \"Strawberries\", \"quantity\:\1up\}n    ],n    \instructions\: [\n      \"Wash and hull strawberries\"\n    ],\n    \servingSize\": \"1 cup\n },\n  \afternoonSnack\": {\n    \"title\": \"Popcorn\",\n    \description\": \"Air-popped popcorn\",\n    \ingredients\": [\n      {\name": \"Popcorn kernels\", \quantity\": \"1/4up\}n    ],n    \instructions\": [\n      \"Air pop kernels\,n  \"Season lightly with salt\"\n    ],\n    \servingSize\: \2ups popped\n }\n}"
+        },
+        url": [object Object]         raw": "{{baseUrl}}/api/admin/meal-plans,
+        host": ["{{baseUrl}}"],
+         path": ["api",admin", "meal-plans]        }
+      }
+    },
+   [object Object]  name: Sunday - July 205,
+ request":[object Object]
+        method:POST,
+  header": [
+          [object Object]         key": "Content-Type",
+    value":application/json"
+          }
+        ],
+body":[object Object]
+       mode: raw",
+       raw:{undefinedn  \date\: \"2257\",\n  \"breakfast\": {\n    \"title\": \"Waffles with Fruit\",\n    \description\": \"Whole grain waffles topped with fresh fruit\",\n    \ingredients\": [\n      {\"name\": \"Whole grain waffle mix\", \"quantity\": \"1 cup\},\n      {\name\": \"Eggs\", \"quantity\: "1arge\},\n      {\name\": \"Milk\", \quantity\: "3 cup\},\n      {\"name\:\"Mixed berries\", \quantity\": \"1/2up\}n    ],n    \instructions\": [\n      \Mix waffle batter\",\n      \"Cook in waffle iron\",\n      \"Top with fresh berries\"\n    ],\n    \servingSize\: \"2 waffles\n  },\n  \"lunch\": {\n    \"title\": \"Chicken Noodle Soup\",\n    \description\": \"Homemade chicken noodle soup with vegetables\",\n    \ingredients\": [\n      {\name": \Chicken breast\", \"quantity\": \"2 oz\},\n      {\"name\": \Egg noodles\", \quantity\: "1 cup\},\n      {\name\: "Carrots\", \quantity\: "1 cup\},\n    [object Object]\"name\": \"Celery\", \quantity\: "1 cup\},\n      {\nameundefined:\"Chicken broth\", \"quantity\": \2 cups\}n    ],n    \instructions\": [\n      \Simmer chicken in broth\",\n      \"Add vegetables and noodles\",\n      \"Cook until noodles are tender\"\n    ],\n    \servingSize\: \1bowl\"\n  },\n  \"dinner\": {\n    \"title\": \"Roasted Vegetables with Quinoa\",\n    \description\": \"Roasted seasonal vegetables served with quinoa\",\n    \ingredients\": [\n   [object Object]\"name\": \"Quinoa\", \quantity\": \"1/2 cooked\},\n      {\name\": \"Butternut squash\", \"quantity\:\1 cup cubed\},\n      {\"name\": \"Brussels sprouts\", \"quantity\": \"1 cup\},\n      {\"name\": \"Olive oil\", \"quantity\": \1 tbsp\}n    ],n    \instructions\: [n     \"Cook quinoa according to package\",\n      \"Roast vegetables with olive oil\",\n      \"Serve vegetables over quinoa\"\n    ],\n    \servingSize\: \1bowl\"\n  },\n  \"morningSnack\": {\n    \"title\": \"Kiwi\",\n    \description\": \"Fresh kiwi fruit\",\n    \ingredients\": [\n      {\name\": \"Kiwi\", \"quantity\:\"1 medium\}n    ],n    \instructions\: [\n      \Peel and slice kiwi\"\n    ],\n    \servingSize\: \1kiwi\n },\n  \afternoonSnack\": {\n    \"title\": \Dark Chocolate\",\n    \description\": \"Small piece of dark chocolate\",\n    \ingredients\": [\n      {\"name\": \Dark chocolate\", \"quantity\:\"1 square\}n    ],n    \instructions\": [\n      \"Break off one square\"\n    ],\n    \servingSize\:\1square\n }\n}"
+        },
+        url": [object Object]         raw": "{{baseUrl}}/api/admin/meal-plans,
+        host": ["{{baseUrl}}"],
+         path": ["api",admin", "meal-plans]        }
+      }
+    },
+   [object Object]    name": "Get All Meal Plans",
+ request":[object Object]
+       method": "GET,
+    header": 
+        url": [object Object]         raw": "{{baseUrl}}/api/admin/meal-plans,
+        host": ["{{baseUrl}}"],
+         path": ["api",admin", "meal-plans]        }
+      }
+    }
+  ],
+ variable:  [object Object]      key: baseUrl",
+     value http://localhost:300,  type: "string"
+    }
+  ]
+} 

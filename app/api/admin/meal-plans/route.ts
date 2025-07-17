@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
 import { getDb } from '../../mongodb'
-import { MealPlanRecord, MealPlanFormData } from '../../../../models/mealPlan'
-import { authOptions } from '../../auth/[...nextauth]/route'
+import { DailyMealPlanRecord, DailyMealPlanFormData } from '../../../../models/mealPlan'
+import { authOptions } from '../../auth/config'
 
 // Helper function to verify admin role
 async function verifyAdminRole() {
@@ -32,19 +32,25 @@ export async function GET() {
   }
 }
 
-// POST: Create a new meal plan
+// POST: Create a new daily meal plan
 export async function POST(req: NextRequest) {
   try {
     const user = await verifyAdminRole()
     const db = await getDb()
-    const data: MealPlanFormData = await req.json()
+    const data: DailyMealPlanFormData = await req.json()
 
-    // Validation
-    if (!data.date || !data.breakfast || !data.lunch || !data.dinner) {
-      return NextResponse.json({ error: 'Missing required fields' }, { status: 400 })
+    // Validation - only date is required
+    if (!data.date) {
+      return NextResponse.json({ error: 'Missing required field: date' }, { status: 400 })
     }
 
-    const newMealPlan: MealPlanRecord = {
+    // Check if at least one meal is provided
+    const hasMeals = data.breakfast || data.lunch || data.dinner || data.morningSnack || data.afternoonSnack
+    if (!hasMeals) {
+      return NextResponse.json({ error: 'At least one meal must be provided' }, { status: 400 })
+    }
+
+    const newMealPlan: DailyMealPlanRecord = {
       id: crypto.randomUUID(),
       date: data.date,
       breakfast: data.breakfast,

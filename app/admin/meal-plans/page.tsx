@@ -4,7 +4,7 @@ import { useEffect, useState } from "react"
 import { useSession } from "next-auth/react"
 import { useRouter } from "next/navigation"
 import Link from "next/link"
-import { MealPlan } from "../../../models/mealPlan"
+import { DailyMealPlanRecord } from "../../../models/mealPlan"
 
 export default function MealPlansPage() {
   const { data: session, status } = useSession() as {
@@ -12,7 +12,7 @@ export default function MealPlansPage() {
     status: "loading" | "authenticated" | "unauthenticated";
   }
   const router = useRouter()
-  const [mealPlans, setMealPlans] = useState<MealPlan[]>([])
+  const [mealPlans, setMealPlans] = useState<DailyMealPlanRecord[]>([])
   const [loading, setLoading] = useState(true)
   const [error, setError] = useState("")
 
@@ -37,9 +37,11 @@ export default function MealPlansPage() {
         throw new Error("Failed to fetch meal plans")
       }
       const data = await res.json()
-      setMealPlans(data)
+      // Ensure data is an array and add validation
+      setMealPlans(Array.isArray(data) ? data : [])
     } catch (err: any) {
       setError(err.message)
+      setMealPlans([]) // Set empty array on error
     } finally {
       setLoading(false)
     }
@@ -59,21 +61,43 @@ export default function MealPlansPage() {
     }
   }
 
-  async function cloneMealPlan(plan: MealPlan) {
-    const newName = prompt("Enter a name for the cloned meal plan:", `${plan.name} (Copy)`)
-    if (!newName) return
+  async function cloneMealPlan(plan: DailyMealPlanRecord) {
+    const newDate = prompt("Enter a new date for the cloned meal plan (YYYY-MM-DD):", plan.date)
+    if (!newDate) return
     
     try {
       const res = await fetch(`/api/admin/meal-plans/${plan.id}/clone`, {
         method: "POST",
         headers: { "Content-Type": "application/json" },
-        body: JSON.stringify({ name: newName }),
+        body: JSON.stringify({ date: newDate }),
       })
       if (!res.ok) throw new Error("Failed to clone meal plan")
       fetchMealPlans()
     } catch (err: any) {
       setError(err.message)
     }
+  }
+
+  // Helper function to count meals in a plan
+  const getMealCount = (plan: DailyMealPlanRecord) => {
+    let count = 0
+    if (plan.breakfast) count++
+    if (plan.lunch) count++
+    if (plan.dinner) count++
+    if (plan.morningSnack) count++
+    if (plan.afternoonSnack) count++
+    return count
+  }
+
+  // Helper function to get meal names
+  const getMealNames = (plan: DailyMealPlanRecord) => {
+    const meals = []
+    if (plan.breakfast) meals.push("Breakfast")
+    if (plan.lunch) meals.push("Lunch")
+    if (plan.dinner) meals.push("Dinner")
+    if (plan.morningSnack) meals.push("Morning Snack")
+    if (plan.afternoonSnack) meals.push("Afternoon Snack")
+    return meals.join(", ")
   }
 
   if (status === 'loading') {
@@ -97,7 +121,7 @@ export default function MealPlansPage() {
               Meal Plan Management
             </h1>
             <p className="mt-2 text-gray-600 dark:text-gray-400">
-              Create and manage weekly meal plans for children
+              Create and manage daily meal plans for children
             </p>
           </div>
           <Link
@@ -118,7 +142,7 @@ export default function MealPlansPage() {
           <div className="text-center py-12">
             <div className="text-gray-600 dark:text-gray-300">Loading meal plans...</div>
           </div>
-        ) : mealPlans.length === 0 ? (
+        ) : !mealPlans || mealPlans.length === 0 ? (
           <div className="text-center py-12">
             <div className="text-gray-500 dark:text-gray-400 mb-4">
               <svg className="mx-auto h-12 w-12" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -144,7 +168,12 @@ export default function MealPlansPage() {
                 <div className="p-6">
                   <div className="flex justify-between items-start mb-4">
                     <h3 className="text-xl font-semibold text-gray-900 dark:text-white">
-                      {plan.name}
+                      {new Date(plan.date).toLocaleDateString('en-US', { 
+                        weekday: 'long', 
+                        year: 'numeric', 
+                        month: 'long', 
+                        day: 'numeric' 
+                      })}
                     </h3>
                     <span className={`px-2 py-1 text-xs font-medium rounded-full ${
                       plan.isActive 
@@ -155,22 +184,21 @@ export default function MealPlansPage() {
                     </span>
                   </div>
                   
-                  {plan.description && (
-                    <p className="text-gray-600 dark:text-gray-400 mb-4 text-sm">
-                      {plan.description}
-                    </p>
-                  )}
-                  
                   <div className="space-y-2 mb-4">
                     <div className="text-sm text-gray-500 dark:text-gray-400">
-                      <span className="font-medium">Week Starting:</span> {new Date(plan.weekStartDate).toLocaleDateString()}
+                      <span className="font-medium">Date:</span> {new Date(plan.date).toLocaleDateString()}
                     </div>
                     <div className="text-sm text-gray-500 dark:text-gray-400">
-                      <span className="font-medium">Days:</span> {plan.days.length} days
+                      <span className="font-medium">Meals:</span> {getMealCount(plan)} meals
                     </div>
                     <div className="text-sm text-gray-500 dark:text-gray-400">
                       <span className="font-medium">Created:</span> {new Date(plan.createdAt).toLocaleDateString()}
                     </div>
+                    {getMealCount(plan) > 0 && (
+                      <div className="text-sm text-gray-500 dark:text-gray-400">
+                        <span className="font-medium">Includes:</span> {getMealNames(plan)}
+                      </div>
+                    )}
                   </div>
 
                   <div className="flex gap-2">

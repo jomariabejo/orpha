@@ -1,8 +1,8 @@
 import { NextRequest, NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
 import { getDb } from '../../../../mongodb'
-import { MealPlanRecord } from '../../../../../../models/mealPlan'
-import { authOptions } from '../../../../auth/[...nextauth]/route'
+import { DailyMealPlanRecord } from '../../../../../../models/mealPlan'
+import { authOptions } from '../../../../auth/config'
 
 // Helper function to verify admin role
 async function verifyAdminRole() {
@@ -28,7 +28,7 @@ export async function POST(req: NextRequest, { params }: { params: Promise<{ id:
     }
 
     // Create new meal plan with updated data
-    const newMealPlan: MealPlanRecord = {
+    const newMealPlan: DailyMealPlanRecord = {
       id: crypto.randomUUID(),
       date: data.date || originalPlan.date,
       breakfast: originalPlan.breakfast,
