@@ -2,7 +2,7 @@ import { NextRequest, NextResponse } from 'next/server'
 import { getServerSession } from 'next-auth'
 import { getDb } from '../../mongodb'
 import { DailyMealPlanRecord, DailyMealPlanFormData } from '../../../../models/mealPlan'
-import { authOptions } from '../../auth/[...nextauth]/route'
+import { authOptions } from '../../auth/config'
 
 // Helper function to verify admin role
 async function verifyAdminRole() {
