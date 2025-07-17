@@ -24,3 +24,29 @@ body {
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
 }
+
+/* Print styles for meal plans */
+@media print {
+  body {
+    background: white !important;
+    color: black !important;
+  }
+  
+  .print\:hidden {
+    display: none !important;
+  }
+  
+  .print\:block {
+    display: block !important;
+  }
+  
+  /* Ensure proper page breaks */
+  .meal-plan-day {
+    page-break-inside: avoid;
+  }
+  
+  /* Hide navigation and buttons when printing */
+  nav, button, .no-print {
+    display: none !important;
+  }
+}
