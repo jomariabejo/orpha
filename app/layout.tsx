@@ -32,6 +32,9 @@ function AuthNavbarWrapper({ children }: { children: React.ReactNode }) {
               <div className="flex items-center gap-6">
                 <Link href="/" className="text-lg font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Home</Link>
                 <Link href="/monitoring" className="text-lg font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Monitoring</Link>
+                {(session.user as any).role === "admin" && (
+                  <Link href="/admin/meal-plans" className="text-lg font-bold text-gray-900 dark:text-white hover:text-blue-600 dark:hover:text-blue-400 transition-colors">Meal Plans</Link>
+                )}
               </div>
             </div>
           </div>
